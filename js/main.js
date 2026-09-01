@@ -14,25 +14,31 @@
      the site has zero external icon requests.
      ------------------------------------------------------------ */
   const ICONS = {
-    // Category icons — 8 new categories
-    essentials:
-      '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>',
-    gadgets:
-      '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="17" r="1.2"/><path d="M9 6h6"/></svg>',
-    setup:
-      '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="1.5"/><path d="M8 21h8M12 17v4"/><circle cx="12" cy="11" r="2"/></svg>',
-    wellness:
-      '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C7 17 3 13.5 3 9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 4.5-4 8-9 12Z"/></svg>',
-    style:
-      '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.57a1 1 0 0 0 .99.84H5v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10h1.15a1 1 0 0 0 .99-.84l.58-3.57a2 2 0 0 0-1.34-2.23Z"/></svg>',
+    technology:
+      '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg>',
     home:
       '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v10h12V10"/><path d="M10 20v-6h4v6"/></svg>',
+    fitness:
+      '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8v8M18 8v8"/><path d="M2 12h4M18 12h4"/><rect x="6" y="6" width="3" height="12" rx="1"/><rect x="15" y="6" width="3" height="12" rx="1"/></svg>',
+    accessories:
+      '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4.2"/><path d="M12 12.2V21M9 17h6"/></svg>',
+    office:
+      '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.2"/><path d="M8 20h8M12 16v4"/></svg>',
     travel:
       '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l8-2 6.5-6.5a1.5 1.5 0 1 1 2 2L13 13l-2 8-2.5-5.5L3 13Z"/></svg>',
-    trending:
-      '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>',
-
-    // UI icons
+    beauty:
+      '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v4.2a3 3 0 0 1-.7 1.9L8 11.4A5 5 0 0 0 7 14.5V19a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-4.5a5 5 0 0 0-1-3.1l-1.3-2.3a3 3 0 0 1-.7-1.9V3"/></svg>',
+    essentials: '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2h6v2M8 10h8M8 14h8"/></svg>',
+    skincare: '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v4.2a3 3 0 0 1-.7 1.9L8 11.4A5 5 0 0 0 7 14.5V19a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-4.5a5 5 0 0 0-1-3.1l-1.3-2.3a3 3 0 0 1-.7-1.9V3"/></svg>',
+    cleansing: '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v4.2a3 3 0 0 1-.7 1.9L8 11.4A5 5 0 0 0 7 14.5V19a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-4.5a5 5 0 0 0-1-3.1l-1.3-2.3a3 3 0 0 1-.7-1.9V3"/><path d="M18 6c1.2 1.5 1.8 2.5 1.8 3.2a1.8 1.8 0 1 1-3.6 0C16.2 8.5 16.8 7.5 18 6Z"/></svg>',
+    moisturizing: '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3.2 3.8 4.8 6.5 4.8 8.5a4.8 4.8 0 0 1-9.6 0C7.2 9.5 8.8 6.8 12 3Z"/><path d="M8 20h8"/></svg>',
+    treatments: '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="7"/></svg>',
+    "sun-care": '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg>',
+    masks: '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12l-1 12a5 5 0 0 1-10 0L6 4Z"/><path d="M9 10h.01M15 10h.01M10 15c1.2.7 2.8.7 4 0"/></svg>',
+    tools: '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 3 4 4-6.5 6.5a3.5 3.5 0 0 0 5 5L15 12l4 4 2-2-4-4 3-3-3-3-3 3-4-4L6 3Z"/></svg>',
+    "body-care": '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v4l-2 3v9a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-9l-2-3V3"/><path d="M8 13h8"/></svg>',
+    "hair-scalp": '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21c-1-5 .5-9 4-11.5C14.5 7 17 5.5 17 2c3 4.5 1.6 9.7-2 12.2-2.5 1.8-3 4.4-2 6.8"/><path d="M8 4c1.5 2.6 1.8 4.6.7 6.3"/></svg>',
+    "beauty-essentials": '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 3 12 12M14 3l7 7M3 14l7 7"/><path d="m5 19 7-7 2 2-7 7H5v-2Z"/></svg>',
     star:
       '<svg viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.5 6 .8-4.4 4.2 1.1 6-5.3-3-5.3 3 1.1-6L1.4 7.8l6-.8L10 1.5Z"/></svg>',
     search:
@@ -63,7 +69,7 @@
   function placeholderImage(product) {
     const cat = categories.find((c) => c.slug === product.category);
     const tint = cat ? cat.tint : "#EDEAE0";
-    const glyphPath = extractPaths(cat ? ICONS[cat.icon] : ICONS.essentials);
+    const glyphPath = extractPaths(cat ? ICONS[cat.icon] : ICONS.technology);
     const initials = product.name
       .split(" ")
       .slice(0, 2)
@@ -85,6 +91,7 @@
   function extractPaths(svgString) {
     if (!svgString) return "";
     const inner = svgString.replace(/^<svg[^>]*>/, "").replace(/<\/svg>$/, "");
+    // Scale the 24x24 icon viewbox up roughly to fit the 80x80 transform group.
     return `<g transform="scale(3.3)">${inner}</g>`;
   }
 
@@ -98,17 +105,9 @@
   function renderHeader() {
     document.getElementById("brand-name").textContent = siteConfig.brandName;
     document.getElementById("brand-initial").textContent = siteConfig.brandInitial;
-    document.title = `${siteConfig.brandName} — ${siteConfig.tagline}`;
-    document.querySelector('meta[name="description"]').setAttribute("content", siteConfig.metaDescription);
-
     const nav = document.getElementById("main-nav");
     const mobileNav = document.getElementById("mobile-nav");
-    siteConfig.nav.forEach((item) => {
-      const a = document.createElement("a");
-      a.href = item.href;
-      a.textContent = item.label;
-      nav.appendChild(a);
-
+    nav.querySelectorAll("a").forEach((a) => {
       const ma = a.cloneNode(true);
       ma.addEventListener("click", closeMobileNav);
       mobileNav.appendChild(ma);
@@ -167,6 +166,7 @@
      PRODUCT CARD (shared by featured + shop grid)
      ------------------------------------------------------------ */
   function productCard(product) {
+    const hasProductImage = Boolean(product.image);
     const img = product.image || placeholderImage(product);
     const cat = categories.find((c) => c.slug === product.category);
     return `
@@ -174,7 +174,7 @@
         <div class="product-media">
           ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ""}
           <span class="curator-note">${product.curatorNote}</span>
-          <img src="${img}" alt="${product.name}" loading="lazy">
+          <img src="${img}" alt="${hasProductImage ? `${product.name} product image` : `Illustration for ${product.name}`}" width="400" height="400" loading="lazy" decoding="async">
         </div>
         <div class="product-body">
           <span class="product-category">${cat ? cat.name : ""}</span>
@@ -186,7 +186,7 @@
           </div>
           <div class="product-actions">
             <button class="btn-view" data-open="${product.id}">Details</button>
-            <a class="btn-amazon" href="${product.amazonUrl}" target="_blank" rel="noopener noreferrer sponsored" data-amazon="${product.id}">View on Amazon</a>
+            ${isValidProductUrl(product.amazonUrl) ? `<a class="btn-amazon" href="${product.amazonUrl}" target="_blank" rel="noopener noreferrer sponsored" data-amazon="${product.id}">View on Amazon</a>` : ""}
           </div>
         </div>
       </article>`;
@@ -203,16 +203,16 @@
     });
   }
 
+  function isValidProductUrl(url) {
+    return typeof url === "string" && /^https?:\/\//i.test(url) && !url.includes("AMAZON_AFFILIATE_LINK_HERE");
+  }
+
   /* ------------------------------------------------------------
      FEATURED
      ------------------------------------------------------------ */
   function renderFeatured() {
     const wrap = document.getElementById("featured-grid");
     const featured = products.filter((p) => p.featured).slice(0, 4);
-    if (!featured.length) {
-      wrap.innerHTML = `<div class="empty-state"><h3>Coming soon</h3><p>Featured picks will appear here once products are added.</p></div>`;
-      return;
-    }
     wrap.innerHTML = featured.map(productCard).join("");
     wireProductCards(wrap);
     observeReveal(wrap);
@@ -306,8 +306,8 @@
     if (!results.length) {
       grid.innerHTML = `
         <div class="empty-state">
-          <h3>Nothing here yet</h3>
-          <p>Products are being added. Check back soon.</p>
+          <h3>Nothing matches yet</h3>
+          <p>Try a different search term or clear the category filter.</p>
         </div>`;
       return;
     }
@@ -361,7 +361,7 @@
         (pt, i) => `
       <div class="about-point reveal">
         <span class="about-point-label">${String(i + 1).padStart(2, "0")}</span>
-        <div><h4>${pt.title}</h4><p>${pt.text}</p></div>
+        <div><h3>${pt.title}</h3><p>${pt.text}</p></div>
       </div>`
       )
       .join("");
@@ -393,7 +393,7 @@
       .map(
         ([heading, links]) => `
       <div class="footer-col">
-        <h5>${heading}</h5>
+        <p class="footer-col-title">${heading}</p>
         ${links.map((l) => `<a href="${l.href}">${l.label}</a>`).join("")}
       </div>`
       )
@@ -415,16 +415,7 @@
     const root = document.getElementById("hero-showcase");
     if (!root) return;
     scItems = products.slice().sort((a, b) => b.id - a.id).slice(0, SHOWCASE_SIZE);
-
-    // No products yet — show a static placeholder
-    if (!scItems.length) {
-      root.innerHTML = `
-        <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:var(--stone);border-radius:var(--radius-l);">
-          <p style="font-family:var(--font-display);font-size:18px;color:var(--ink-faint);font-style:italic;">Products coming soon.</p>
-        </div>`;
-      return;
-    }
-
+    if (!scItems.length) return;
     root.innerHTML = `
       <div class="sc-slide" id="sc-slide"></div>
       <div class="sc-dots" id="sc-dots"></div>
@@ -442,6 +433,7 @@
     root.addEventListener("keydown", e => { if (e.key === "Enter") openModal(scItems[scIdx].id); });
     root.addEventListener("mouseenter", stopTimer);
     root.addEventListener("mouseleave", startTimer);
+    // Touch swipe support
     let tx = 0;
     root.addEventListener("touchstart", e => { tx = e.touches[0].clientX; }, { passive: true });
     root.addEventListener("touchend", e => {
@@ -460,7 +452,7 @@
     const paint = () => {
       slide.innerHTML = `
         <span class="sc-tag">New arrival</span>
-        <div class="sc-img"><img src="${img}" alt="${p.name}" loading="lazy"></div>
+        <div class="sc-img"><img src="${img}" alt="${p.image ? `${p.name} product image` : `Illustration for ${p.name}`}" width="400" height="400" fetchpriority="high" decoding="async"></div>
         <div class="sc-info">
           <span class="sc-cat">${cat ? cat.name : ""}</span>
           <span class="sc-name">${p.name}</span>
@@ -506,20 +498,22 @@
     const overlay = document.getElementById("modal-overlay");
 
     document.getElementById("modal-image").src = product.image || placeholderImage(product);
-    document.getElementById("modal-image").alt = product.name;
+    document.getElementById("modal-image").alt = product.image ? `${product.name} product image` : `Illustration for ${product.name}`;
     document.getElementById("modal-category").textContent = cat ? cat.name : "";
     document.getElementById("modal-name").textContent = product.name;
     document.getElementById("modal-rating").innerHTML = ratingStars(product.rating);
     document.getElementById("modal-price").textContent = product.price;
     document.getElementById("modal-desc").textContent = product.details;
-    document.getElementById("modal-note").textContent = `"${product.curatorNote}"`;
+    document.getElementById("modal-note").textContent = `“${product.curatorNote}”`;
     document.getElementById("modal-features").innerHTML = product.features
       .map((f) => `<li>${f}</li>`)
       .join("");
     const amazonBtn = document.getElementById("modal-amazon");
     amazonBtn.href = product.amazonUrl;
+    amazonBtn.hidden = !isValidProductUrl(product.amazonUrl);
 
     overlay.classList.add("is-open");
+    overlay.setAttribute("aria-hidden", "false");
     document.body.classList.add("modal-open");
     lastFocused = document.activeElement;
     document.getElementById("modal-close").focus();
@@ -528,6 +522,7 @@
   let lastFocused = null;
   function closeModal() {
     document.getElementById("modal-overlay").classList.remove("is-open");
+    document.getElementById("modal-overlay").setAttribute("aria-hidden", "true");
     document.body.classList.remove("modal-open");
     if (lastFocused) lastFocused.focus();
   }
@@ -556,6 +551,7 @@
     navToggle.addEventListener("click", () => {
       const isOpen = mobileNav.classList.toggle("is-open");
       navToggle.setAttribute("aria-expanded", String(isOpen));
+      navToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
       navToggle.innerHTML = isOpen ? ICONS.close : ICONS.menu;
     });
   }
