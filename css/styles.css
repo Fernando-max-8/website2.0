@@ -1,5 +1,5 @@
 /* ==========================================================================
-   AISLE & CO. — DESIGN TOKENS
+   REFINEDBOY — DESIGN TOKENS
    A quiet, editorial palette: warm off-white paper, near-black ink,
    and a single restrained bronze accent used only for meaning
    (ratings, active states, the affiliate CTA) — never decoration.
@@ -127,13 +127,6 @@ input { font: inherit; color: inherit; }
   color: var(--ink-soft);
   max-width: 38ch;
   font-size: 15.5px;
-}
-.about-heading {
-  font-family: var(--font-display);
-  font-size: clamp(28px, 3.2vw, 40px);
-  font-weight: 500;
-  margin-top: 12px;
-  max-width: 16ch;
 }
 
 .btn {
@@ -336,12 +329,12 @@ input { font: inherit; color: inherit; }
 }
 
 /* ==========================================================================
-   CATEGORY STRIP
+   CATEGORY STRIP — 4 columns for 8 categories (2 rows of 4)
    ========================================================================== */
 
 .category-scroller {
   display: grid;
-  grid-template-columns: repeat(6, minmax(160px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 14px;
 }
 .category-card {
@@ -397,8 +390,11 @@ input { font: inherit; color: inherit; }
 .featured-grid {
   display: grid;
   grid-template-columns: 1.3fr 1fr 1fr;
+  grid-template-rows: auto auto;
   gap: 24px;
-  align-items: start;
+}
+.featured-grid .product-card:first-child {
+  grid-row: 1 / 3;
 }
 
 .product-card {
@@ -409,11 +405,12 @@ input { font: inherit; color: inherit; }
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  opacity: 0;
   transform: translateY(16px);
-  transition: transform var(--dur-l) var(--ease),
+  transition: opacity var(--dur-l) var(--ease), transform var(--dur-l) var(--ease),
               border-color var(--dur-s) var(--ease), box-shadow var(--dur-m) var(--ease);
 }
-.product-card.is-visible { transform: translateY(0); }
+.product-card.is-visible { opacity: 1; transform: translateY(0); }
 .product-card:hover {
   border-color: var(--ink-faint);
   transform: translateY(-3px);
@@ -449,9 +446,6 @@ input { font: inherit; color: inherit; }
   border-radius: 999px;
 }
 
-/* Signature element: the curator's note — a small marginalia-style
-   annotation that slides in on hover/focus, styled like an editor's
-   handwritten aside rather than a marketing badge. */
 .curator-note {
   position: absolute;
   right: 14px; top: 14px;
@@ -705,7 +699,7 @@ input { font: inherit; color: inherit; }
   color: var(--accent-deep);
   padding-top: 2px;
 }
-.about-point h3 { font-family: var(--font-display); font-size: 19px; margin-bottom: 6px; }
+.about-point h4 { font-family: var(--font-display); font-size: 19px; margin-bottom: 6px; }
 .about-point p { font-size: 14px; color: var(--ink-soft); max-width: 46ch; }
 
 /* ==========================================================================
@@ -756,7 +750,7 @@ input { font: inherit; color: inherit; }
   gap: 12px;
   margin-top: 22px;
 }
-.footer-col-title {
+.footer-col h5 {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -897,12 +891,13 @@ body.modal-open { overflow: hidden; }
    ========================================================================== */
 
 .reveal {
+  opacity: 0;
   transform: translateY(22px);
-  transition: transform var(--dur-l) var(--ease);
+  transition: opacity var(--dur-l) var(--ease), transform var(--dur-l) var(--ease);
 }
-.reveal.is-visible { transform: translateY(0); }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
 
-/* Stagger delay for sibling reveal items */
+/* Stagger delays — extended to 8 for category cards */
 .category-scroller .reveal:nth-child(1) { transition-delay: 0ms; }
 .category-scroller .reveal:nth-child(2) { transition-delay: 55ms; }
 .category-scroller .reveal:nth-child(3) { transition-delay: 110ms; }
@@ -910,6 +905,7 @@ body.modal-open { overflow: hidden; }
 .category-scroller .reveal:nth-child(5) { transition-delay: 220ms; }
 .category-scroller .reveal:nth-child(6) { transition-delay: 275ms; }
 .category-scroller .reveal:nth-child(7) { transition-delay: 330ms; }
+.category-scroller .reveal:nth-child(8) { transition-delay: 385ms; }
 
 .product-grid .reveal:nth-child(1)  { transition-delay: 0ms; }
 .product-grid .reveal:nth-child(2)  { transition-delay: 50ms; }
@@ -931,7 +927,8 @@ body.modal-open { overflow: hidden; }
   .container { padding: 0 24px; }
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }
   .hero-visual { aspect-ratio: 16 / 9; max-width: 520px; }
-  .category-scroller { grid-template-columns: repeat(3, 1fr); }
+  /* 8 categories → 4 columns on tablet still works, drop to 2 below */
+  .category-scroller { grid-template-columns: repeat(4, 1fr); }
   .featured-grid { grid-template-columns: 1fr 1fr; }
   .featured-grid .product-card:first-child { grid-column: 1 / 3; grid-row: auto; }
   .featured-grid .product-card:first-child .product-media { aspect-ratio: 16/9; min-height: 0; }
@@ -1085,19 +1082,13 @@ body.modal-open { overflow: hidden; }
 .sc-nav.sc-next { right: 12px; }
 .sc-nav svg { width: 15px; height: 15px; stroke: var(--ink); }
 
-/* Tablet: full-width landscape ratio when hero-grid collapses */
 @media (max-width: 1024px) {
   #hero-showcase { aspect-ratio: 16 / 7; max-width: 100%; }
   .sc-nav { opacity: 1; }
 }
-/* Mobile */
 @media (max-width: 700px) {
   #hero-showcase { aspect-ratio: 4 / 3; }
   .sc-nav { display: none; }
   .sc-info { margin: 12px; padding: 11px 13px; }
   .sc-img img { padding: 24px; }
 }
-/* Hide prices site-wide */
-.product-price,
-.sc-price,
-.modal-price { display: none; }
