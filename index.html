@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QXG9JYB3ZZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QXG9JYB3ZZ');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curated Product Recommendations | refinedboy</title>
+<meta name="description" content="Independent product recommendations across technology, home, fitness, beauty, office, travel and accessories. Explore a considered shortlist before you buy.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#FAFAF8">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Curated Product Recommendations | refinedboy">
+<meta property="og:description" content="Independent product recommendations across everyday categories, selected and compared before you buy.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="refinedboy">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Curated Product Recommendations | refinedboy">
+<meta name="twitter:description" content="Independent product recommendations across everyday categories, selected and compared before you buy.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2316150F'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23FAFAF8' font-family='Georgia,serif'%3EA%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============================== HEADER ============================== -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="#home" class="brand">
+      <span class="brand-mark" id="brand-initial">refinedboy</span>
+      <span id="brand-name">Refinedboy</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#categories">Categories</a>
+      <a href="#featured">Featured</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile"></nav>
+
+<main id="home">
+
+  <!-- ============================== HERO ============================== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow" id="hero-eyebrow">An independent selection</span>
+        <h1 id="hero-heading">Curated product recommendations for everyday life.</h1>
+        <p id="hero-sub">We spend the hours comparing specifications, reading reviews and rejecting disappointing options, so you can explore a more considered shortlist.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#shop" id="hero-cta">
+            <span></span>
+            <svg viewBox="0 0 20 20" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="btn-arrow"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+          </a>
+          <span class="hero-stat"><strong id="hero-count"></strong> products across <strong id="hero-cat-count"></strong> categories</span>
+        </div>
+      </div>
+      <div class="hero-visual" id="hero-showcase" aria-label="Latest product recommendations. Select to view details." tabindex="0" role="button"></div>
+    </div>
+  </section>
+
+  <!-- ============================== CATEGORIES ============================== -->
+  <section class="section section--tight" id="categories">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Browse by category</span>
+          <h2>Everything is sorted, nothing is buried.</h2>
+        </div>
+        <p>— nothing is added just to pad out a shelf.</p>
+      </div>
+      <div class="category-scroller" id="category-scroller"></div>
+    </div>
+  </section>
+
+  <!-- ============================== FEATURED ============================== -->
+  <section class="section" id="featured">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Editor's selection</span>
+          <h2>The picks we'd recommend to a friend first.</h2>
+        </div>
+        <p>Pulled from across every category — these are the ones we keep coming back to.</p>
+      </div>
+      <div class="featured-grid" id="featured-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============================== SHOP ============================== -->
+  <section class="section" id="shop">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Full catalog</span>
+          <h2>Search, filter, and compare.</h2>
+        </div>
+        <p>Every product on the site, in one place.</p>
+      </div>
+
+      <div class="shop-layout">
+        <div class="filter-backdrop" id="filter-backdrop"></div>
+        <aside class="filter-panel" id="filter-panel">
+          <div class="filter-group">
+            <label class="filter-title" for="search-input">Search</label>
+            <div class="search-field">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+              <input type="search" id="search-input" placeholder="Search products…" aria-label="Search products">
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-title">Category</span>
+            <div class="filter-list" id="category-filter-list"></div>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-title">Show only</span>
+            <div class="filter-toggle-row">
+              <button class="switch" id="featured-toggle" role="switch" aria-checked="false" aria-label="Featured only"></button>
+              <span style="font-size:14px;color:var(--ink-soft)">Featured picks</span>
+            </div>
+          </div>
+        </aside>
+
+        <div class="shop-main">
+          <div class="shop-toolbar">
+            <button class="mobile-filter-toggle" id="mobile-filter-toggle">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+              Filter
+            </button>
+            <span class="result-count" id="result-count"></span>
+            <label class="sort-select">
+              Sort by
+              <select id="sort-select" aria-label="Sort products">
+                <option value="curated">Curated order</option>
+                <option value="price-asc">Price: low to high</option>
+                <option value="price-desc">Price: high to low</option>
+                <option value="rating">Rating</option>
+              </select>
+            </label>
+          </div>
+          <div class="product-grid" id="shop-grid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== ABOUT / TRUST ============================== -->
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div class="about-copy">
+        <span class="eyebrow" id="about-eyebrow"></span>
+        <h2 class="about-heading" id="about-heading">An honest second opinion, before you buy.</h2>
+        <p id="about-body">Every listing here has been researched and compared against its closest alternatives. We do not accept sponsorships for inclusion; qualifying purchases through some links may earn us a referral fee at no extra cost to you.</p>
+      </div>
+      <div class="about-points" id="about-points"></div>
+    </div>
+  </section>
+
+  <!-- ============================== CTA ============================== -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="cta-band">
+        <h2>Ready to see what made the shortlist?</h2>
+        <a class="btn btn-primary" href="#shop">
+          <span>Explore products</span>
+          <svg viewBox="0 0 20 20" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="btn-arrow"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="site-footer" id="disclosure">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="brand">
+          <span class="brand-mark">A&amp;C</span>
+          <span id="footer-brand-name">refinedboy</span>
+        </a>
+        <p id="footer-tagline"></p>
+        <div class="footer-social" id="footer-social"></div>
+      </div>
+      <div class="footer-cols" id="footer-cols" style="display:contents;"></div>
+    </div>
+    <div class="footer-bottom">
+      <p id="disclosure-text"></p>
+      <p>© <span id="footer-year"></span> <span id="footer-brand-name-bottom"></span>. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================== PRODUCT MODAL ============================== -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-name" aria-hidden="true">
+  <div class="product-modal">
+    <div class="modal-media">
+      <img id="modal-image" src="" alt="">
+    </div>
+    <div class="modal-body">
+      <button class="modal-close" id="modal-close" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg>
+      </button>
+      <span class="product-category" id="modal-category"></span>
+      <h3 id="modal-name"></h3>
+      <div class="modal-rating" id="modal-rating"></div>
+      <p class="modal-price" id="modal-price"></p>
+      <p class="modal-desc" id="modal-desc"></p>
+      <ul class="modal-features" id="modal-features"></ul>
+      <p class="modal-note" id="modal-note"></p>
+      <div class="modal-actions">
+        <a class="btn-amazon" id="modal-amazon" href="#" target="_blank" rel="noopener noreferrer sponsored">View on Amazon</a>
+      </div>
+      <p class="modal-disclosure-note">Amazon Associates disclosure applies — see footer for details.</p>
+    </div>
+  </div>
+</div>
+
+<span id="year-attr" hidden></span>
+
+<script src="js/config.js"></script>
+<script src="js/categories.js"></script>
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
