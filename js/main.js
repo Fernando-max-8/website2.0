@@ -543,7 +543,7 @@
   /* ------------------------------------------------------------
      INIT
      ------------------------------------------------------------ */
-  document.addEventListener("DOMContentLoaded", () => {
+ function initApp() {
     document.getElementById("year-attr").textContent = new Date().getFullYear();
     renderHeader();
     renderHero();
@@ -558,5 +558,11 @@
     wireModal();
     wireHeader();
     observeReveal(document);
-  });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initApp);
+  } else {
+    initApp();
+  }
 })();
