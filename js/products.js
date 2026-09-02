@@ -11,7 +11,7 @@ const products = [
     badge: "Editor's Pick",
     featured: true,
     amazonUrl: "https://amzn.to/4yjkGGY",
-    image: "images/cosrx-snail-essence.jpg"
+    image: "images/products/cosrx-snail-essence.jpg"
   },
   {
     id: 2,
