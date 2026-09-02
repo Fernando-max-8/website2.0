@@ -91,8 +91,19 @@
   function extractPaths(svgString) {
     if (!svgString) return "";
     const inner = svgString.replace(/^<svg[^>]*>/, "").replace(/<\/svg>$/, "");
-    // Scale the 24x24 icon viewbox up roughly to fit the 80x80 transform group.
     return `<g transform="scale(3.3)">${inner}</g>`;
+  }
+
+  /* ------------------------------------------------------------
+     Image fallback helper — called by onerror on product images.
+     Falls back to the SVG placeholder if the real image 404s.
+     ------------------------------------------------------------ */
+  function applyImageFallback(imgEl, productId) {
+    const product = products.find((p) => p.id === Number(productId));
+    if (product) {
+      imgEl.src = placeholderImage(product);
+      imgEl.onerror = null;
+    }
   }
 
   /* ------------------------------------------------------------
@@ -165,12 +176,15 @@
     const hasProductImage = Boolean(product.image);
     const img = product.image || placeholderImage(product);
     const cat = categories.find((c) => c.slug === product.category);
+    const onerror = hasProductImage
+      ? `onerror="this.onerror=null;(function(el){var p=window.__rbProducts&&window.__rbProducts.find(function(x){return x.id===${product.id}});if(p){var c=window.__rbCategories&&window.__rbCategories.find(function(x){return x.slug===p.category});var t=c?c.tint:'%23EDEAE0';el.src='data:image/svg+xml;utf8,%3Csvg xmlns=\\'http://www.w3.org/2000/svg\\' viewBox=\\'0 0 400 400\\'%3E%3Crect width=\\'400\\' height=\\'400\\' fill=\\''+t+'\\' /%3E%3C/svg%3E';}})(this)"`
+      : "";
     return `
       <article class="product-card reveal" data-id="${product.id}" tabindex="0">
         <div class="product-media">
           ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ""}
           <span class="curator-note">${product.curatorNote}</span>
-          <img src="${img}" alt="${hasProductImage ? `${product.name} product image` : `Illustration for ${product.name}`}" width="400" height="400" loading="lazy" decoding="async">
+          <img src="${img}" alt="${hasProductImage ? `${product.name} product image` : `Illustration for ${product.name}`}" width="400" height="400" loading="lazy" decoding="async" data-product-id="${product.id}">
         </div>
         <div class="product-body">
           <span class="product-category">${cat ? cat.name : ""}</span>
@@ -192,6 +206,13 @@
       card.addEventListener("keydown", (e) => {
         if (e.key === "Enter" && !e.target.closest("a,button")) openModal(Number(card.dataset.id));
       });
+      // Image error fallback: if real image fails, show SVG placeholder
+      const img = card.querySelector(".product-media img[data-product-id]");
+      if (img) {
+        img.addEventListener("error", function () {
+          applyImageFallback(this, this.dataset.productId);
+        });
+      }
     });
   }
 
@@ -330,7 +351,7 @@
         (pt, i) => `
       <div class="about-point reveal">
         <span class="about-point-label">${String(i + 1).padStart(2, "0")}</span>
-        <div><h3>${pt.title}</h3><p>${pt.text}</p></div>
+        <div><h4>${pt.title}</h4><p>${pt.text}</p></div>
       </div>`
       )
       .join("");
@@ -362,7 +383,7 @@
       .map(
         ([heading, links]) => `
       <div class="footer-col">
-        <p class="footer-col-title">${heading}</p>
+        <h5>${heading}</h5>
         ${links.map((l) => `<a href="${l.href}">${l.label}</a>`).join("")}
       </div>`
       )
@@ -421,12 +442,19 @@
     const paint = () => {
       slide.innerHTML = `
         <span class="sc-tag">New arrival</span>
-        <div class="sc-img"><img src="${img}" alt="${p.image ? `${p.name} product image` : `Illustration for ${p.name}`}" width="400" height="400" fetchpriority="high" decoding="async"></div>
+        <div class="sc-img"><img src="${img}" alt="${p.image ? `${p.name} product image` : `Illustration for ${p.name}`}" width="400" height="400" fetchpriority="high" decoding="async" data-product-id="${p.id}"></div>
         <div class="sc-info">
           <span class="sc-cat">${cat ? cat.name : ""}</span>
           <span class="sc-name">${p.name}</span>
           <p class="sc-desc">${p.description}</p>
         </div>`;
+      // Image fallback for showcase
+      const imgEl = slide.querySelector(".sc-img img");
+      if (imgEl && p.image) {
+        imgEl.addEventListener("error", function () {
+          applyImageFallback(this, this.dataset.productId);
+        });
+      }
       requestAnimationFrame(() => slide.classList.add("is-active"));
     };
     if (animate && !prefersReduced) {
@@ -462,12 +490,21 @@
     const cat = categories.find((c) => c.slug === product.category);
     const overlay = document.getElementById("modal-overlay");
 
-    document.getElementById("modal-image").src = product.image || placeholderImage(product);
-    document.getElementById("modal-image").alt = product.image ? `${product.name} product image` : `Illustration for ${product.name}`;
+    const modalImg = document.getElementById("modal-image");
+    modalImg.src = product.image || placeholderImage(product);
+    modalImg.alt = product.image ? `${product.name} product image` : `Illustration for ${product.name}`;
+    // Fallback if modal image 404s
+    if (product.image) {
+      modalImg.onerror = function () {
+        this.src = placeholderImage(product);
+        this.onerror = null;
+      };
+    }
+
     document.getElementById("modal-category").textContent = cat ? cat.name : "";
     document.getElementById("modal-name").textContent = product.name;
     document.getElementById("modal-desc").textContent = product.details;
-    document.getElementById("modal-note").textContent = `“${product.curatorNote}”`;
+    document.getElementById("modal-note").textContent = `"${product.curatorNote}"`;
     document.getElementById("modal-features").innerHTML = product.features
       .map((f) => `<li>${f}</li>`)
       .join("");
