@@ -11,7 +11,7 @@ const products = [
     badge: "Editor's Pick",
     featured: true,
     amazonUrl: "https://amzn.to/4yjkGGY",
-    image: "images/products/416kUGx2rQL._SX679_.jpg"
+    image: "images/416kUGx2rQL._SX679_.jpg"
   },
   {
     id: 2,
