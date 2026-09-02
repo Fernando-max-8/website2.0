@@ -249,7 +249,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/3UpPC9P",
-    image: null
+    image: "images/61bjVUf7GwL._SX355_.jpg"
   },
   {
     id: 19,
