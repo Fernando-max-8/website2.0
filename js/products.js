@@ -11,7 +11,7 @@ const products = [
     badge: "Editor's Pick",
     featured: true,
     amazonUrl: "https://amzn.to/4yjkGGY",
-    image: null
+    image: "images/416kUGx2rQL._SX679_.jpg"
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/45WZLNI",
-    image: null
+    image: "images/61EidjXUBrL._SY450_.jpg"
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const products = [
     badge: "Best Seller",
     featured: true,
     amazonUrl: "https://amzn.to/4ycMbll",
-    image: null
+    image: "images/612NxRjAoCL._SX466_.jpg"
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4i35TeB",
-    image: null
+    image: "images/61w1ejKsmXL._SX466_.jpg"
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/3UzdeJ0",
-    image: null
+    image: "images/717lRkBFR3L._SY450_.jpg"
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4x6hcGC",
-    image: null
+    image: "images/71F5-vrxyRL._SY879_.jpg"
   },
   {
     id: 7,
@@ -95,7 +95,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4xsWrWA",
-    image: null
+    image: "images/71Msn18lZcL._SY450_.jpg"
   },
   {
     id: 8,
@@ -109,7 +109,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4gyzoE0",
-    image: null
+    image: "images/61ZCYK4subL._SY741_.jpg"
   },
   {
     id: 9,
@@ -123,7 +123,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/3UvIOaH",
-    image: null
+    image: "images/61Se8Z9n4oL._SX466_.jpg"
   },
   {
     id: 10,
@@ -137,7 +137,7 @@ const products = [
     badge: "Best Seller",
     featured: true,
     amazonUrl: "https://amzn.to/4icFew1",
-    image: null
+    image: "images/61H-JGJPOFL._SY450_.jpg"
   },
   {
     id: 11,
@@ -151,7 +151,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4xR8NIx",
-    image: null
+    image: "images/71I9gtceY8L._SY450_.jpg"
   },
   {
     id: 12,
@@ -165,7 +165,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4qYV8wb",
-    image: null
+    image: "images/51bC4vVdkOL._SX466_.jpg"
   },
   {
     id: 13,
@@ -179,7 +179,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4zPOgoN",
-    image: null
+    image: "images/61G3FDAnC8L._SY355_.jpg"
   },
   {
     id: 14,
@@ -193,7 +193,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4zWzcWO",
-    image: null
+    image: "images/61msVAtaNPL._SX466_.jpg"
   },
   {
     id: 15,
@@ -207,7 +207,7 @@ const products = [
     badge: "Editor's Pick",
     featured: true,
     amazonUrl: "https://amzn.to/46C2Y5q",
-    image: null
+    image: "images/61pNJwG1erL._SY450_.jpg"
   },
   {
     id: 16,
@@ -221,7 +221,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4zRbH12",
-    image: null
+    image: "images/613YEAluowL._SX466_.jpg"
   },
   {
     id: 17,
@@ -235,7 +235,7 @@ const products = [
     badge: "New",
     featured: true,
     amazonUrl: "https://amzn.to/4x6EXy9",
-    image: null
+    image: "images/51ubxqzNGIL._SY355_.jpg"
   },
   {
     id: 18,
@@ -249,7 +249,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/3UpPC9P",
-    image: null
+    image: "images/61bjVUf7GwL._SY355_.jpg"
   },
   {
     id: 19,
@@ -263,7 +263,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4qQ4lHa",
-    image: null
+    image: "images/710pdbo9-QL._SY355_.jpg"
   },
   {
     id: 20,
@@ -277,7 +277,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4xy1BRh",
-    image: null
+    image: "images/71y1S7ZvoSL._AC_SX466_.jpg"
   },
   {
     id: 21,
@@ -291,7 +291,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4x2Mzlk",
-    image: null
+    image: "images/61VtpMKBtVL._SY355_.jpg"
   },
   {
     id: 22,
@@ -305,7 +305,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4yak2Lz",
-    image: null
+    image: "images/61Q-2hny74L._AC_SX466_.jpg"
   },
   {
     id: 23,
@@ -319,7 +319,7 @@ const products = [
     badge: "Best Seller",
     featured: true,
     amazonUrl: "https://amzn.to/4yfmvEv",
-    image: null
+    image: "images/61IQUadfGEL._SY450_.jpg"
   },
   {
     id: 24,
@@ -333,7 +333,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/46zdkmB",
-    image: null
+    image: "images/51mbLoi5RIL._SY879_.jpg"
   },
   {
     id: 25,
@@ -347,7 +347,7 @@ const products = [
     badge: "Editor's Pick",
     featured: true,
     amazonUrl: "https://amzn.to/4x5PSse",
-    image: null
+    image: "images/61VhV3+-HwL._SX466_.jpg"
   },
   {
     id: 26,
@@ -361,7 +361,7 @@ const products = [
     badge: "Best Seller",
     featured: true,
     amazonUrl: "https://amzn.to/46C39O8",
-    image: null
+    image: "images/61JBgQvsWtL._SY450_.jpg"
   },
   {
     id: 27,
@@ -375,7 +375,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/3Uv2NGu",
-    image: null
+    image: "images/610sljWCCzL._SX466_.jpg"
   },
   {
     id: 28,
@@ -389,7 +389,7 @@ const products = [
     badge: "Editor's Pick",
     featured: true,
     amazonUrl: "https://amzn.to/4ye5pXJ",
-    image: null
+    image: "images/71WKpWKG6kL._SX466_.jpg"
   },
   {
     id: 29,
@@ -403,7 +403,7 @@ const products = [
     badge: "Best Seller",
     featured: true,
     amazonUrl: "https://amzn.to/4deatmK",
-    image: null
+    image: "images/61K6cQhw4EL._SY450_.jpg"
   },
   {
     id: 30,
@@ -417,7 +417,6 @@ const products = [
     badge: "Best Seller",
     featured: false,
     amazonUrl: "https://amzn.to/4ya2dfK",
-    image: null
+    image: "images/71MQo8pHmBL._SY450_.jpg"
   },
 ];
-
