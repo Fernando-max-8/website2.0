@@ -11,7 +11,7 @@ const siteConfig = {
   brandInitial: "r",
   tagline: "A refined edit of things worth owning.",
   metaDescription:
-    "refinedboy is an independent, curated selection of products worth buying — hand-picked across technology, home, fitness, beauty and travel.",
+    "refinedboy is an independent, curated selection of skincare, body care, hair care and beauty essentials.",
 
   nav: [
     { label: "Home", href: "#home" },
@@ -23,9 +23,9 @@ const siteConfig = {
 
   hero: {
     eyebrow: "An independent selection",
-    heading: "Curated product recommendations for everyday life.",
+    heading: "Curated skincare, hair and beauty picks for everyday routines.",
     subheading:
-      "We spend the hours comparing specifications, reading reviews and rejecting disappointing options, so you can explore a more considered shortlist.",
+      "Explore a considered shortlist of skincare, body care, hair care and beauty essentials for your everyday routine.",
     ctaLabel: "Explore the selection",
     ctaHref: "#shop",
   },

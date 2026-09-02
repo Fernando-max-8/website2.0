@@ -95,10 +95,6 @@
     return `<g transform="scale(3.3)">${inner}</g>`;
   }
 
-  function ratingStars(rating) {
-    return `${ICONS.star}<span>${rating.toFixed(1)}</span>`;
-  }
-
   /* ------------------------------------------------------------
      HEADER + NAV
      ------------------------------------------------------------ */
@@ -180,10 +176,6 @@
           <span class="product-category">${cat ? cat.name : ""}</span>
           <h3 class="product-name">${product.name}</h3>
           <p class="product-desc">${product.description}</p>
-          <div class="product-meta">
-            <span class="product-rating">${ratingStars(product.rating)}</span>
-            <span class="product-price">${product.price}</span>
-          </div>
           <div class="product-actions">
             <button class="btn-view" data-open="${product.id}">Details</button>
             ${isValidProductUrl(product.amazonUrl) ? `<a class="btn-amazon" href="${product.amazonUrl}" target="_blank" rel="noopener noreferrer sponsored" data-amazon="${product.id}">View on Amazon</a>` : ""}
@@ -225,7 +217,6 @@
     category: "all",
     searchTerm: "",
     featuredOnly: false,
-    sort: "curated",
   };
 
   function filteredProducts() {
@@ -238,25 +229,7 @@
         (p) => p.name.toLowerCase().includes(q) || p.description.toLowerCase().includes(q)
       );
     }
-    switch (state.sort) {
-      case "price-asc":
-        list.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
-        break;
-      case "price-desc":
-        list.sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
-        break;
-      case "rating":
-        list.sort((a, b) => b.rating - a.rating);
-        break;
-      default:
-        break; // "curated" = original catalog order
-    }
     return list;
-  }
-
-  function parsePrice(str) {
-    const n = parseFloat(str.replace(/[^\d.,]/g, "").replace(",", "."));
-    return Number.isNaN(n) ? 0 : n;
   }
 
   function renderFilterPanel() {
@@ -319,10 +292,6 @@
   function wireShopControls() {
     document.getElementById("search-input").addEventListener("input", (e) => {
       state.searchTerm = e.target.value;
-      renderShop();
-    });
-    document.getElementById("sort-select").addEventListener("change", (e) => {
-      state.sort = e.target.value;
       renderShop();
     });
     const toggle = document.getElementById("featured-toggle");
@@ -457,10 +426,6 @@
           <span class="sc-cat">${cat ? cat.name : ""}</span>
           <span class="sc-name">${p.name}</span>
           <p class="sc-desc">${p.description}</p>
-          <div class="sc-meta">
-            <span class="sc-rating">${ratingStars(p.rating)}</span>
-            <span class="sc-price">${p.price}</span>
-          </div>
         </div>`;
       requestAnimationFrame(() => slide.classList.add("is-active"));
     };
@@ -501,8 +466,6 @@
     document.getElementById("modal-image").alt = product.image ? `${product.name} product image` : `Illustration for ${product.name}`;
     document.getElementById("modal-category").textContent = cat ? cat.name : "";
     document.getElementById("modal-name").textContent = product.name;
-    document.getElementById("modal-rating").innerHTML = ratingStars(product.rating);
-    document.getElementById("modal-price").textContent = product.price;
     document.getElementById("modal-desc").textContent = product.details;
     document.getElementById("modal-note").textContent = `“${product.curatorNote}”`;
     document.getElementById("modal-features").innerHTML = product.features
