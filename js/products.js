@@ -11,7 +11,7 @@ const products = [
     badge: "Editor's Pick",
     featured: true,
     amazonUrl: "https://amzn.to/4yjkGGY",
-    image: "images/products/cosrx-snail-essence.jpg"
+    image: "images/products/416kUGx2rQL._SY450_.jpg"
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/45WZLNI",
-    image: "images/products/cerave-moisturizing-cream.jpg"
+    image: "images/products/61EidjXUBrL._SY450_.jpg"
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const products = [
     badge: "Best Seller",
     featured: true,
     amazonUrl: "https://amzn.to/4ycMbll",
-    image: "images/products/the-ordinary-niacinamide.jpg"
+    image: "images/products/612NxRjAoCL._SX466_.jpg"
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4i35TeB",
-    image: "images/products/cerave-foaming-cleanser.jpg"
+    image: "images/products/61w1ejKsmXL._SX466_.jpg"
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/3UzdeJ0",
-    image: "images/products/cerave-sa-cleanser.jpg"
+    image: "images/products/717lRkBFR3L._SY450_.jpg"
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4x6hcGC",
-    image: "images/products/neutrogena-micellar-water.jpg"
+    image: "images/products/71F5-vrxyRL._SY879_.jpg"
   },
   {
     id: 7,
@@ -95,7 +95,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4xsWrWA",
-    image: "images/products/cosrx-snail-cream.jpg"
+    image: "images/products/71Msn18lZcL._SY450_.jpg"
   },
   {
     id: 8,
@@ -109,7 +109,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4gyzoE0",
-    image: "images/products/cerave-pm-lotion.jpg"
+    image: "images/products/61ZCYK4subL._SY741_.jpg"
   },
   {
     id: 9,
@@ -123,7 +123,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/3UvIOaH",
-    image: "images/products/the-ordinary-hyaluronic.jpg"
+    image: "images/products/61Se8Z9n4oL._SX466_.jpg"
   },
   {
     id: 10,
@@ -137,7 +137,7 @@ const products = [
     badge: "Best Seller",
     featured: true,
     amazonUrl: "https://amzn.to/4icFew1",
-    image: "images/products/starface-hydro-stars.jpg"
+    image: "images/products/61H-JGJPOFL._SY450_.jpg"
   },
   {
     id: 11,
@@ -151,7 +151,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4xR8NIx",
-    image: "images/products/panoxyl-foaming-wash.jpg"
+    image: "images/products/71I9gtceY8L._SY450_.jpg"
   },
   {
     id: 12,
@@ -165,7 +165,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4qYV8wb",
-    image: "images/products/the-ordinary-glycolic.jpg"
+    image: "images/products/51bC4vVdkOL._SX466_.jpg"
   },
   {
     id: 13,
@@ -179,7 +179,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4zPOgoN",
-    image: "images/products/differin-adapalene.jpg"
+    image: "images/products/61G3FDAnC8L._SY355_.jpg"
   },
   {
     id: 14,
@@ -193,7 +193,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4zWzcWO",
-    image: "images/products/cerave-am-spf50.jpg"
+    image: "images/products/61msVAtaNPL._SX466_.jpg"
   },
   {
     id: 15,
@@ -207,7 +207,7 @@ const products = [
     badge: "Editor's Pick",
     featured: true,
     amazonUrl: "https://amzn.to/46C2Y5q",
-    image: "images/products/la-roche-posay-anthelios.jpg"
+    image: "images/products/61pNJwG1erL._SY450_.jpg"
   },
   {
     id: 16,
@@ -221,7 +221,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4zRbH12",
-    image: "images/products/eltamd-uv-clear.jpg"
+    image: "images/products/613YEAluowL._SX466_.jpg"
   },
   {
     id: 17,
@@ -235,7 +235,7 @@ const products = [
     badge: "New",
     featured: true,
     amazonUrl: "https://amzn.to/4x6EXy9",
-    image: "images/products/biodance-bio-collagen-mask.jpg"
+    image: "images/products/51ubxqzNGIL._SY355_.jpg"
   },
   {
     id: 18,
@@ -249,7 +249,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/3UpPC9P",
-    image: "images/products/aztec-secret-clay.jpg"
+    image: "images/products/61bjVUf7GwL._SY355_.jpg"
   },
   {
     id: 19,
@@ -263,7 +263,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4qQ4lHa",
-    image: "images/products/mediheal-sheet-masks.jpg"
+    image: "images/products/710pdbo9-QL._SY355_.jpg"
   },
   {
     id: 20,
@@ -277,7 +277,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4xy1BRh",
-    image: "images/products/kitsch-gua-sha.jpg"
+    image: "images/products/71y1S7ZvoSL._AC_SX466_.jpg"
   },
   {
     id: 21,
@@ -291,7 +291,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4x2Mzlk",
-    image: "images/products/ice-roller.jpg"
+    image: "images/products/61VtpMKBtVL._SY355_.jpg"
   },
   {
     id: 22,
@@ -305,7 +305,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/4yak2Lz",
-    image: "images/products/pritech-cleansing-brush.jpg"
+    image: "images/products/61Q-2hny74L._AC_SX466_.jpg"
   },
   {
     id: 23,
@@ -319,7 +319,7 @@ const products = [
     badge: "Best Seller",
     featured: true,
     amazonUrl: "https://amzn.to/4yfmvEv",
-    image: "images/products/eos-vanilla-cashmere-lotion.jpg"
+    image: "images/products/61IQUadfGEL._SY450_.jpg"
   },
   {
     id: 24,
@@ -333,7 +333,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/46zdkmB",
-    image: "images/products/cerave-sa-body-wash.jpg"
+    image: "images/products/51mbLoi5RIL._SY879_.jpg"
   },
   {
     id: 25,
@@ -347,7 +347,7 @@ const products = [
     badge: "Editor's Pick",
     featured: true,
     amazonUrl: "https://amzn.to/4x5PSse",
-    image: "images/products/sol-de-janeiro-bum-bum.jpg"
+    image: "images/products/61VhV3+-HwL._SX466_.jpg"
   },
   {
     id: 26,
@@ -361,7 +361,7 @@ const products = [
     badge: "Best Seller",
     featured: true,
     amazonUrl: "https://amzn.to/46C39O8",
-    image: "images/products/mielle-rosemary-mint-oil.jpg"
+    image: "images/products/61JBgQvsWtL._SY450_.jpg"
   },
   {
     id: 27,
@@ -375,7 +375,7 @@ const products = [
     badge: null,
     featured: false,
     amazonUrl: "https://amzn.to/3Uv2NGu",
-    image: "images/products/olaplex-no3.jpg"
+    image: "images/products/610sljWCCzL._SX466_.jpg"
   },
   {
     id: 28,
@@ -389,7 +389,7 @@ const products = [
     badge: "Editor's Pick",
     featured: true,
     amazonUrl: "https://amzn.to/4ye5pXJ",
-    image: "images/products/k18-leave-in-mask.jpg"
+    image: "images/products/71WKpWKG6kL._SX466_.jpg"
   },
   {
     id: 29,
@@ -403,7 +403,7 @@ const products = [
     badge: "Best Seller",
     featured: true,
     amazonUrl: "https://amzn.to/4deatmK",
-    image: "images/products/essence-lash-princess.jpg"
+    image: "images/products/61K6cQhw4EL._SY450_.jpg"
   },
   {
     id: 30,
@@ -417,6 +417,6 @@ const products = [
     badge: "Best Seller",
     featured: false,
     amazonUrl: "https://amzn.to/4ya2dfK",
-    image: "images/products/maybelline-sky-high.jpg"
+    image: "images/products/71MQo8pHmBL._SY450_.jpg"
   }
 ];
