@@ -418,6 +418,6 @@ const products = [
     featured: false,
     amazonUrl: "https://amzn.to/4ya2dfK",
     image: null
-  }
+  },
 ];
 
