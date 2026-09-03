@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://fernando-max-8.github.io/website/sitemap.xml
