@@ -238,20 +238,6 @@ const products = [
     image: "images/51ubxqzNGIL._SY355_.jpg"
   },
   {
-    id: 18,
-    name: "Aztec Secret Indian Healing Clay",
-    category: "masks",
-    rating: 4.6,
-    description: "A calcium bentonite clay powder for mix-at-home face masks.",
-    details: "A powder clay mask that can be prepared fresh as part of a skincare ritual.",
-    features: ["Calcium bentonite clay", "Powder formula", "Mix-at-home mask", "Reusable tub"],
-    curatorNote: "A classic DIY mask that remains easy to recognize.",
-    badge: null,
-    featured: false,
-    amazonUrl: "https://amzn.to/3UpPC9P",
-    image: "images/61bjVUf7GwL._SY355_.jpg"
-  },
-  {
     id: 19,
     name: "Mediheal Essential Mask Sheet Set",
     category: "masks",
